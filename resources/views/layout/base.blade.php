@@ -648,10 +648,68 @@
               background-color: none;
               padding: 3px;
             }
+            footer{
+              padding: 10PX;
+              background-image: url(https://us.123rf.com/450wm/mikado767/mikado7671511/mikado767151100152/47622152-abstract-infograf%C3%ADa-horizontales-rayas-gradiente-arco-iris-de-recortes-en-el-fondo-blanco-rgb-eps-10.jpg);
+              background-repeat: no-repeat;
+              background-size: 100%; 
+            }
+            .g{
+              display: inline;
+              margin-left: 30px;
+            }
+            .t{
+              width: 40%;
+              display: inline;
+              margin-left: 100px;
+            }
+            .t a{
+              display: inline-flex;
+              text-decoration: none;
+              color: white;
+              float: right;
+              padding: 5px;
+              padding-right: 20px;
+            }
+            .t a i{
+              margin-right: 5px;
+            }
           </style>
     @yield('cuerpo')
-
+    <footer>
+      <div class="g">
+      <!-- Button trigger modal -->
+      <button id="btn" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+       Contacto
+      </button>
+      </div>
+      <div class="t">
+        <a href="mailto:dilberthvalqui@gmail.com"><i class="bi bi-envelope-at-fill"></i><b>dilberthvalqui@gmail.com</b></a>
+        <a href="mailto:dantenmiguel.2k@gmail.com"><i class="bi bi-envelope-at-fill"></i><b>dantenmiguel.2k@gmail.com</b></a>
+      </div>
+<form action="{{ asset('contacto') }}" method="post" >
+  @csrf
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h5 class="modal-title text-light" id="staticBackdropLabel"><i class="bi bi-person-rolodex"> </i> Crear Contacto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <label for="">Numero</label>
+        <input class="form-control" type="text" name="numero">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="bi bi-x-square-fill"> </i> Cancelar</button>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-save-fill"> </i>Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+    </footer>
   <script src="{{ asset('js/app.js') }}" defer></script>
-
 </body>
 </html>

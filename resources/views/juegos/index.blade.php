@@ -1,8 +1,7 @@
 @extends('layout.base')
 @section('titulo', 'Inicio')
 @section('cuerpo')
-<p>AQUI IRA ESA VAINA DE LA ROCHIS</p>
-
+<b>Hola mundo tiembla ante mi</b>
 <hr class="hr1">
 <div class="container">
   <div class="card">
@@ -60,7 +59,7 @@
   width: 100%
 }
 .carousel-inner img{
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .ei{
   font-size: 20px;
