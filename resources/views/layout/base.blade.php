@@ -38,18 +38,117 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
+      <style>
+        .accordion-button{
+          background-color: transparent;
+          color: white;
+          padding: 5px;
+          width: 100%;
+        }
+        .accordion-item{
+          background-color: transparent;
+          color: white;
+          width: 100%
+        }
+        .carousel-inner img{
+          opacity: 0.9;
+        }
+        .ei{
+          font-size: 20px;
+          text-decoration: none;
+          color: white;
+        }
+        #image{
+          background-image: url(3.jpg);
+          align-content: center;
+          backface-visibility: hidden;
+        }
+        .container{
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;  
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;   
+        }
+        .frases{
+          position: absolute; top: 0px;
+          width: 95%;
+          margin: 30px;
+          text-align: center;
+          color: rgb(236, 220, 220);
+          text-shadow: 0.1em 0.1em 0.05em rgb(122, 7, 133);
+          text-shadow: 0.1em 0.1em 0.2em rgb(90, 176, 187);
+        }
+        .frases .p{
+          text-align: center;
+          font-size: 28px;
+          font-family: initial;
+          width: 73%;
+        }
+        .frases .p1{
+          margin-top: 25px;
+          text-align: center;
+          width: 53%;
+          }
+        .frases h1{
+          font-family: fantasy;
+        }
+        .container .card:hover{
+          transform: translateY(-15px);
+          margin: 15px;
+        }
+        .card{
+          margin: 15px;
+        }
+        .container .card img{
+          width: 330px;
+          height: 220px;
+          margin: auto;
+        }
+        .link{
+          text-decoration: none;
+          display: block;
+          color: black;
+          margin-left: 20px;
+        }
+        .uno{
+          width: 40%;
+          margin-right: 80px;
+        }
+        .dos{
+          width: 40%;
+        }
+        .h{
+          margin-top: 15px;
+        }
+        .hr1 {border: 3px solid #666; width: 95%; margin: auto; border-radius: 300px/10px; height: 0px; text-align: center;}
+        .hr {border: 0; height: 24px; box-shadow: inset 0 22px 12px -12px rgb(5, 134, 117); color: rgb(22, 15, 129); text-align: center;}
+        .hr:after {content:"\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605\2600\2605"; font-size: 14px;color: rgba(226, 171, 171, 0.123);}
+        .container-fluid{
+          margin-top:1px;
+        }
+        </style>
       <div class="frases">
-        <p>
-          756E2070726F6772616D61646F7220616C206E61636572206E6F206C6C6F
-                       7261206469636520686F6C61206D756E646F
+        <marquee behavior="alternate" direction="" scrollamount="10">
+        <p class="p">
+756E2070726F6772616D61646F7220616C206E61636572206E6F206C6C6F<br>
+         7261206469636520686F6C61206D756E646F
         </p>
-        <p>
-        01110011 01101001 00100000 01100110 01110101 01101110 01100011 01101001 01101111 01101110 01100001 00100000 01111001 01100001 00100000 01101110 01101111 00100000 01101100 01100101 00100000 01101101 01110101 01100101 01110110 01100001 01110011 
+      </marquee>
+      <h1 style="color: red; margin: 0;">
+        Diseño web h.w.
+      </h1>
+      <marquee behavior="alternate" direction="left" scrollamount="6">
+        <p class="p1">
+01110011 01101001 00100000 01100110 01110101 01101110 01100011 <br>
+01101001 01101111 01101110 01100001 00100000 01111001 01100001 <br>
+00100000 01101110 01101111 00100000 01101100 01100101 00100000 <br>
+    01101101 01110101 01100101 01110110 01100001 01110011 
         </p>
+      </marquee>
       </div>
-  
     </div>
-
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <div id="image" class="col-auto col-md-4 col-xl-2  px-0">
@@ -68,8 +167,8 @@
                           </button>                        
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                           <div class="accordion-body">
-                            <a class="ei" href="">El ahorcado</a>
-                            <a class="ei" href="">El snake</a>
+                            <a class="ei" href="{{ asset('ahorcado') }}">El ahorcado</a>
+                            <a class="ei" href="{{ asset('culebra') }}">El snake</a>
                           </div>
                         </div>
                       </div>
@@ -82,8 +181,8 @@
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                           <div class="accordion-body">
                             <a class="ei" href="">Calculadora</a>
-                            <a class="ei" href="">Ejercicio 1</a>
-                            <a class="ei" href="">Ejercicio 2</a>
+                            <a class="ei" href="{{ asset('gmail') }}">gmail</a>
+                            <a class="ei" href="{{ asset('imprimir') }}">Imprimir</a>
                           </div>
                         </div>
                       </div>

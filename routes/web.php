@@ -26,4 +26,20 @@ Route::post('contacto', function(Request $request){
     $contacto->save();
     return view('juegos.index');
 });
-
+//Rutas para juegos
+Route::get('ahorcado', function (){
+    return view('games.ahorcado');
+});
+Route::get('culebra', function (){
+    return view('games.culebra');
+});
+//Rutas para ejercicios
+Route::get('calculadora', function (){
+    return view('ejercicios.calculadora');
+});
+Route::get('correo', function (){
+    return view('ejercicios.correo');
+});
+Route::get('imprimir', function (){
+    return view('ejercicios.imprimir');
+});
