@@ -1,39 +1,7 @@
 @extends('layout.base')
 @section('title', 'Ahorcado')
 @section('cuerpo')
-<HTML>
-    <HEAD>
-        <TITLE>Ejemplo de juego</TITLE>
-        <link rel="stylesheet" href="estilos.css">
-        <link rel="shortcut icon" href="https://santiagosustentable.com/santiago2030/recursos/ahorcado/img/ahorcado_0.png" type="image/png">
-        <header>
-            <div>
-                <marquee behavior="scroll" direction="left" scrollamount="30" ><p>Bienvenidos A Un Nuevo Amanecer<img src="https://www.transparentpng.com/thumb/smile/gGsgum-emoji-feliz-png-emoticon-smile-clipart-full-size.png" alt="S/In."></p></marquee>
-            </div>
-        </header>
-        <body class="cuerpo">
-            <div>
-            <hr>
-            <nav class="nav">
-                <a class="a" href="index.html"><h2>Inicio</h2></a>
-                |<a class="a" href="ahorcado.html"><h4>Ahorcado</h4></a>
-                |<a class="a" href="snake.html"><h4>Culebrita</h4></a>
-                <div class="b">
-                    <audio controls>
-                        <source src="lp.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-            </nav>
-            <hr>
-            <a class="a" href="Ejemplo03.html"><h4>Ejecicio 1</h4></a>
-            |<a class="a" href="Ejemplo05-.html"><h4>Ejecicio 2</h4></a>
-            |<a class="a" href="Ejemplo07.html"><h4>Ejecicio 3</h4></a>
-            |<a class="a" href="Ejercicio9.html"><h4>Ejecicio 4</h4></a>
-            |<a class="a" href="Ejercicio10.html"><h4>Ejecicio 5</h4></a>
-            |<a class="a" href="Ejercicio11.html"><h4>Ejecicio 6</h4></a>
-            <hr>
-            </div>
-    </body>
+      <link rel="shortcut icon" href="https://santiagosustentable.com/santiago2030/recursos/ahorcado/img/ahorcado_0.png" type="image/png">
         <style>
             h2{
                 color:white;
@@ -42,12 +10,6 @@
             h4{
                 color: white;
                 display: inline;
-            }
-            td input{
-                background-color:white;
-            }
-            td textarea{
-                background-color: red;
             }
         </style>
     <body background= "C:\Users\DILBERTH\Desktop\google-imagenes-2.jpg"></body>
@@ -153,73 +115,75 @@ function FinJuego(resultado) {
     </HEAD>
     <BODY> 
     <FORM NAME=visor>
-        <center style="margin-top: 60px">
-            <font color="red" style="font-size: 60px;">Juego del Ahorcado</font>
+        <center>
+            <font color="red" style="font-size: 60px; font-style:italic;">Juego del Ahorcado</font>
         </center>
-        <audio controls style="float:right; ">
-            <source src="C:\Users\DILBERTH\Music\DRAKARIS.mp3" type="audio/mp3"></audio>
-        <video style="float: lefth;" src="GROD.mp4" width="250" height="100" 
-    preload controls type="video/mp4"></video>
         <CENTER>
-            <TABLE width=600>
+            <TABLE class="table">
                 <font color="yellow">
                 <TR>
-                    <TD colspan=3 width=200 ALIGN=center><textarea name=displayHombre cols=20 rows=6></textarea>
-                    <TD colspan=3 WIDTH=200 ALIGN=center><textarea name=displayLetras cols=20 rows=6></textarea>
-                    <TD width=200>
+                    <TD colspan=3 ALIGN=center><textarea name=displayHombre cols=20 rows=5></textarea></TD>
+                    <TD colspan=3 ALIGN=center><textarea name=displayLetras cols=20 rows=5></textarea></TD>
+                </tr>
                 <TR>
-                    <TD colspan=6 width=300 ALIGN=center><INPUT NAME=displayPalabra SIZE=42>
-                    <TD ALIGN=center>&nbsp;
+                    <TD colspan=6 ALIGN=center><INPUT align=center class="form-control" NAME=displayPalabra SIZE=42></TD>
                 <TR>
-                    <td align=center width=50><input type=button name=botA value=" A " onClick="Juega(this.form, 'a')">
-                    <td align=center width=50><input type=button name=botB value=" B " onClick="Juega(this.form, 'b')">
-                    <td align=center width=50><input type=button name=botC value=" C " onClick="Juega(this.form, 'c')">
-                    <td align=center width=50><input type=button name=botD value=" D " onClick="Juega(this.form, 'd')">
-                    <td align=center width=50><input type=button name=botE value=" E " onClick="Juega(this.form, 'e')">
-                    <td align=center width=50><input type=button name=botF value=" F " onClick="Juega(this.form, 'f')">
-                    <td>
+                    <td align=center><input class="btn btn-success" type=button name=botA value=" A " onClick="Juega(this.form, 'a')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botB value=" B " onClick="Juega(this.form, 'b')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botC value=" C " onClick="Juega(this.form, 'c')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botD value=" D " onClick="Juega(this.form, 'd')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botE value=" E " onClick="Juega(this.form, 'e')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botF value=" F " onClick="Juega(this.form, 'f')"></td>
+                </TR>
                 <tr>
-                    <td align=center><input type=button name=botG value=" G " onClick="Juega(this.form, 'g')">
-                    <td align=center><input type=button name=botH value=" H " onClick="Juega(this.form, 'h')">
-                    <td align=center><input type=button name=botI value=" I " onClick="Juega(this.form, 'i')">
-                    <td align=center><input type=button name=botJ value=" J " onClick="Juega(this.form, 'j')">
-                    <td align=center><input type=button name=botK value=" K " onClick="Juega(this.form, 'k')">
-                    <td align=center><input type=button name=botL value=" L " onClick="Juega(this.form, 'l')">
-                    <td align=left valign=middle><font color="yellow">Ganadas:  </font><input type=text name=ganadas size=4 value=0>
+                    <td align=center><input class="btn btn-success" type=button name=botG value=" G " onClick="Juega(this.form, 'g')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botH value=" H " onClick="Juega(this.form, 'h')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botI value=" I " onClick="Juega(this.form, 'i')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botJ value=" J " onClick="Juega(this.form, 'j')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botK value=" K " onClick="Juega(this.form, 'k')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botL value=" L " onClick="Juega(this.form, 'l')"></td>
+                    <td><font color="yellow">Ganadas:  </font><input class="btn btn-info" type=text name=ganadas size=4 value=0></td>
+                </tr>
                 <tr>
-                    <td align=center><input type=button name=botM value=" M " onClick="Juega(this.form, 'm')">
-                    <td align=center><input type=button name=botN value=" N " onClick="Juega(this.form, 'n')">
-                    <td align=center><input type=button name=botÑ value=" Ñ " onClick="Juega(this.form, 'ñ')">
-                    <td align=center><input type=button name=botO value=" O " onClick="Juega(this.form, 'o')">
-                    <td align=center><input type=button name=botP value=" P " onClick="Juega(this.form, 'p')">
-                    <td align=center><input type=button name=botQ value=" Q " onClick="Juega(this.form, 'q')">
-                    <td align=left valign=middle><font color="yellow">Perdidas:  </font><input type=text name=perdidas size=4 value=0>
+                    <td align=center><input class="btn btn-success" type=button name=botM value=" M " onClick="Juega(this.form, 'm')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botN value=" N " onClick="Juega(this.form, 'n')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botÑ value=" Ñ " onClick="Juega(this.form, 'ñ')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botO value=" O " onClick="Juega(this.form, 'o')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botP value=" P " onClick="Juega(this.form, 'p')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botQ value=" Q " onClick="Juega(this.form, 'q')"></td>
+                    <td><font color="yellow">Perdidas:  </font><input class="btn btn-info" type=text name=perdidas size=4 value=0></td>
+                </tr>
                 <tr>
-                    <td align=center><input type=button name=botR value=" R " onClick="Juega(this.form, 'r')">
-                    <td align=center><input type=button name=botS value=" S " onClick="Juega(this.form, 's')">
-                    <td align=center><input type=button name=botT value=" T " onClick="Juega(this.form, 't')">
-                    <td align=center><input type=button name=botU value=" U " onClick="Juega(this.form, 'u')">
-                    <td align=center><input type=button name=botV value=" V " onClick="Juega(this.form, 'v')">
-                    <td align=center><input type=button name=botW value=" W " onClick="Juega(this.form, 'w')">
-                    <td>
+                    <td align=center><input class="btn btn-success" type=button name=botR value=" R " onClick="Juega(this.form, 'r')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botS value=" S " onClick="Juega(this.form, 's')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botT value=" T " onClick="Juega(this.form, 't')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botU value=" U " onClick="Juega(this.form, 'u')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botV value=" V " onClick="Juega(this.form, 'v')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botW value=" W " onClick="Juega(this.form, 'w')"></td>
+                </tr>
                 <tr>
-                    <td align=center><input type=button name=botX value=" X " onClick="Juega(this.form, 'x')">
-                    <td align=center><input type=button name=botY value=" Y " onClick="Juega(this.form, 'y')">
-                    <td align=center><input type=button name=botZ value=" Z " onClick="Juega(this.form, 'z')">
+                    <td></td>
+                    <td align=center><input class="btn btn-success" type=button name=botX value=" X " onClick="Juega(this.form, 'x')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botY value=" Y " onClick="Juega(this.form, 'y')"></td>
+                    <td align=center><input class="btn btn-success" type=button name=botZ value=" Z " onClick="Juega(this.form, 'z')"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
                 <tr>
-                    <td align=center><input type=button name=botX value=" 1 " onClick="Juega(this.form, '1')">
-                    <td align=center><input type=button name=botY value=" 2 " onClick="Juega(this.form, '2')">
-                    <td align=center><input type=button name=botZ value=" 3 " onClick="Juega(this.form, '3')">
-                    <td align=center><input type=button name=botX value=" 4 " onClick="Juega(this.form, '4')">
-                    <td align=center><input type=button name=botY value=" 5 " onClick="Juega(this.form, '5')">
-                    <td align=center><input type=button name=botZ value=" 6 " onClick="Juega(this.form, '6')">
-                <tr>
-                    <td align=center><input type=button name=botX value=" 7 " onClick="Juega(this.form, '7')">
-                    <td align=center><input type=button name=botY value=" 8 " onClick="Juega(this.form, '8')">
-                    <td align=center><input type=button name=botZ value=" 9 " onClick="Juega(this.form, '9')">
-                    <td align=center><input type=button name=botX value=" 0 " onClick="Juega(this.form, '0')">
-                    <td colspan=10 align=center><input type=button name=Inicia value=" New Game " onClick="IniciaJuego(this.form)">
-                    <td align=center ><input type=button value=Limpiar name=B1 onClick="this.form.ganadas.value='0' ;  this.form.perdidas.value='0'">
+                    <td></td>
+                    <td></td>
+                    <td align="center"><button class="btn btn-primary" type="button" name="Inicia" onClick="IniciaJuego(this.form)"><i class="bi bi-joystick"></i></button></td>
+                    <td></td>
+                    <td align="center"><button class="btn btn-warning" type=button name=B1 onClick="this.form.ganadas.value='0' ;  this.form.perdidas.value='0'"><i class="bi bi-backspace"></i></button></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </TR>
+                </font>
+            </TABLE>
+        </CENTER>
+    </FORM>
                       <style type="text/css">
           body{
             background-image: url(https://st3.depositphotos.com/2836267/18403/v/600/depositphotos_184031946-stock-illustration-sad-melancholy-hanged-man.jpg);
@@ -227,10 +191,6 @@ function FinJuego(resultado) {
             background-attachment: fixed;
             background-size: 100% 100%;
         }         
-          </style>
-            </TABLE>
-        </CENTER>
-    </FORM>      
+          </style>     
     </BODY>
-</HTML>
 @stop

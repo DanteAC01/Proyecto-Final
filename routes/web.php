@@ -43,3 +43,15 @@ Route::get('correo', function (){
 Route::get('imprimir', function (){
     return view('ejercicios.imprimir');
 });
+Route::get('abrir', function (){
+    return view('ejercicios.abrir');
+});
+Route::get('barra', function (){
+    return view('ejercicios.barra');
+});
+Route::get('elegir', function (){
+    return view('ejercicios.elegir');
+});
+Route::get('nombre', function (){
+    return view('ejercicios.nombre');
+});

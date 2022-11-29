@@ -57,6 +57,7 @@
           font-size: 20px;
           text-decoration: none;
           color: white;
+          display: block;
         }
         #image{
           background-image: url(3.jpg);
@@ -152,18 +153,17 @@
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <div id="image" class="col-auto col-md-4 col-xl-2  px-0">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">                </a>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                    <li class="nav-item">
-                        <a class="ei" href="{{ asset('juegos') }}" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i><span class="ms-1 d-none d-sm-inline">Inicio</span>
+            <div class=" align-items-center align-items-sm-start px-3 pt-2 text-white">
+                <ul class="nav nav-pills flex-column align-items-center align-items-sm-start" id="menu">
+                    <li>
+                        <a class="ei" href="{{ asset('/') }}">
+                            <i class="fs-4 bi-house"></i>Inicio</span>
                         </a>
                     </li>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                       <div class="accordion-item">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Juegos
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                            <p><i class="bi bi-controller"></i>  Juegos</p>
                           </button>                        
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                           <div class="accordion-body">
@@ -173,27 +173,29 @@
                         </div>
                       </div>
                       <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Ejercicios
+                            <p><i class="bi bi-file-spreadsheet"></i> Ejercicios</p>
                           </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">
-                            <a class="ei" href="">Calculadora</a>
-                            <a class="ei" href="{{ asset('gmail') }}">gmail</a>
-                            <a class="ei" href="{{ asset('imprimir') }}">Imprimir</a>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse">
+                          <div class="accordion-body mx-auto">
+                            <a class="ei" href="{{ asset('calculadora') }}"> Calculadora</a>
+                            <a class="ei" href="{{ asset('correo') }}"> Corre</a>
+                            <a class="ei" href="{{ asset('imprimir') }}"> Imprimir</a>
+                            <a class="ei" href="{{ asset('abrir') }}"> Abrir Youtube</a>
+                            <a class="ei" href="{{ asset('barra') }}"> Barra de Estado</a>
+                            <a class="ei" href="{{ asset('elegir') }}"> Elegir Imagen</a>
+                            <a class="ei" href="{{ asset('nombre') }}"> Poner Nombre</a>
                           </div>
                         </div>
                       </div>
                     </div>
                     <p>
-                      <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                      <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample1">
                         <i class="bi bi-alarm-fill"></i>
                       </button>
                     </p>
                     <div>
-                      <div class="collapse collapse-vertical" id="collapseWidthExample">
+                      <div class="collapse collapse-vertical" id="collapseWidthExample1">
                         <div class="card card-body">
                           <div class="relog">
                             <style type="text/css">
@@ -748,10 +750,11 @@
               padding: 3px;
             }
             footer{
-              padding: 10PX;
               background-image: url(https://us.123rf.com/450wm/mikado767/mikado7671511/mikado767151100152/47622152-abstract-infograf%C3%ADa-horizontales-rayas-gradiente-arco-iris-de-recortes-en-el-fondo-blanco-rgb-eps-10.jpg);
               background-repeat: no-repeat;
               background-size: 100%; 
+              margin: auto;
+              width: 100%;
             }
             .g{
               display: inline;
@@ -775,6 +778,7 @@
             }
           </style>
     @yield('cuerpo')
+
     <footer>
       <div class="g">
       <!-- Button trigger modal -->
@@ -797,18 +801,18 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <label for="">Numero</label>
+        <label for="">nombre</label>
         <input class="form-control" type="text" name="numero">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="bi bi-x-square-fill"> </i> Cancelar</button>
+        <button type="button" class="btn btn-warning  " data-bs-dismiss="modal"><i class="bi bi-x-square-fill"> </i> Cancelar</button>
         <button type="submit" class="btn btn-primary"><i class="bi bi-save-fill"> </i>Guardar</button>
       </div>
     </div>
   </div>
 </div>
 </form>
-    </footer>
+</footer>
   <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

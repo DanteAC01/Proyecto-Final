@@ -1,49 +1,13 @@
 @extends('layout.base')
 @section('title', 'Culebra')
 @section('cuerpo')
-<html>
-    <head>
-        <title>Juego de la culebrita</title>
-        <link rel="stylesheet" href="estilos.css">
         <link rel="shortcut icon" href="https://www.pngall.com/wp-content/uploads/2016/03/Snake-PNG-Image.png" type="image/png">
-        <header>
-            <div>
-                <marquee behavior="scroll" direction="left" scrollamount="30" ><p>Bienvenidos A Un Nuevo Amanecer<img src="https://www.transparentpng.com/thumb/smile/gGsgum-emoji-feliz-png-emoticon-smile-clipart-full-size.png" alt="S/In."></p></marquee>
-            </div>
-        </header>
-        <body class="cuerpo">
-            <div>
-                <hr>
-                <nav class="nav">
-                    <a class="a" href="index.html"><h2 class="h2">Inicio</h2></a>
-                    |<a class="a" href="ahorcado.html"><h4 class="h4">Ahorcado</h4></a>
-                    |<a class="a" href="snake.html"><h4 class="h4">Culebrita</h4></a>
-                    <div class="b">
-                        <audio controls>
-                            <source src="lp.mp3" type="audio/mp3">
-                        </audio>
-                    </div>
-                </nav>
-                <hr>
-                <a class="a" href="Ejemplo03.html"><h4 class="h4">Ejecicio 1</h4></a>
-                |<a class="a" href="Ejemplo05-.html"><h4 class="h4">Ejecicio 2</h4></a>
-                |<a class="a" href="Ejemplo07.html"><h4 class="h4">Ejecicio 3</h4></a>
-                |<a class="a" href="Ejercicio9.html"><h4 class="h4">Ejecicio 4</h4></a>
-                |<a class="a" href="Ejercicio10.html"><h4 class="h4">Ejecicio 5</h4></a>
-                |<a class="a" href="Ejercicio11.html"><h4 class="h4">Ejecicio 6</h4></a>
-                <hr>
-                </div>
-    </body>
         <script language="JavaScript">
             //visualizar un mensaje de bienvenida
             alert("!bienvenido a nuestra pagina!");
         </script>
-        
-    </head>
-</html>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <title>Juego de la culebrita</title>
     <style type="text/css">
@@ -96,16 +60,17 @@
             .
             .
     <center>
-        <a href="https://www.youtube.com/"><input
-                type="button" value="IR A YOUTUBE"> </a>
-        <a href="C:/Users/DILBERTH/Pictures/IMAGENES/FE/17013.jpg"> <input type="button"
-        value="IR A UNA IMAGEN"></a>
-        <a href="DRAKARIS.mp4"><input type="button"
-                                                                      value="IR A UN VIDEO"></a>
-                <a href="C:\Users\DILBERTH\Pictures\IMAGENES\gif.gif"><input
-        type="button" value="GRACIAS"></a>
-<a href="Index.html"><input type="button" value="Back"></a>
-    </center>
+<a href="https://www.youtube.com/">
+<input class="btn btn-warning" type="button" value="IR A YOUTUBE"></a>
+<a href="C:/Users/DILBERTH/Pictures/IMAGENES/FE/17013.jpg">
+<input class="btn btn-warning" type="button" value="IR A UNA IMAGEN"></a>
+<a href="DRAKARIS.mp4">
+<input class="btn btn-warning" type="button" value="IR A UN VIDEO"></a>
+<a href="C:\Users\DILBERTH\Pictures\IMAGENES\gif.gif">
+<input class="btn btn-warning" type="button" value="GRACIAS"></a>
+<br>
+<br>
+  </center>
     </body>
 
     <script>
@@ -271,5 +236,4 @@
         setInterval('main()',velocidad);
     </script>
     </html>
-</html>
 @stop
